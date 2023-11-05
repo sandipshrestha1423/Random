@@ -5,6 +5,7 @@ function Header() {
     <>
       <div className="header">
         <div className="title">Whaiyat!</div>
+        <div className="ulluswat">UlluSwat😉</div>
         <div className="navbar">
           <ul>
             <li>Home</li>

@@ -4,43 +4,86 @@
   padding: 0;
   margin: 0;
 }
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: chocolate;
-  height: 70px;
-  font-family: "Tilt Neon", sans-serif;
+.container {
+  background-color: white;
 
-  .title {
-    font-size: 40px;
+  .header {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: chocolate;
+    height: 70px;
+    font-family: "Tilt Neon", sans-serif;
     color: white;
-    font-weight: bold;
-  }
-  .navbar {
-    color: white;
-    ul {
-      display: flex;
-      list-style-type: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    .title {
+      margin: 0 3px;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .ulluswat {
+      font-size: 35px;
+      font-weight: bold;
+    }
 
-      li {
-        background-color: rgb(170, 86, 27);
-        margin: 2px;
-        border-radius: 6px;
-        padding: 5px;
-        transition: all 0.5s; // Add font-size transition
+    .navbar {
+      ul {
+        display: flex;
+        list-style-type: none;
 
-        &:hover {
-          padding: 8px 13px;
-          cursor: pointer;
-          background-color: rgb(211, 120, 54);
-          font-size: large; // Enlarge font size for the hovered item
-        }
+        li {
+          background-color: rgb(170, 86, 27);
+          margin: 2px;
+          border-radius: 6px;
+          padding: 5px;
+          transition: all 0.5s; // Add font-size transition
 
-        &:not(:hover) {
-          font-size: initial; // Set font size back to the initial value for non-hovered items
+          &:hover {
+            padding: 8px 13px;
+            cursor: pointer;
+            background-color: rgb(211, 120, 54);
+            font-size: large;
+            font-weight: bold;
+          }
+
+          &:not(:hover) {
+            padding: 8px 13px;
+          }
         }
       }
+    }
+  }
+  .content {
+    display: flex;
+    border-radius: 15px;
+    background-color: grey;
+    height: 200px;
+    margin: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: white;
+      font-family: "Tilt Neon", sans-serif;
+      font-size: 45px;
+      font-weight: bold;
+    }
+  }
+  .blue {
+    display: flex;
+    height: 200px;
+    margin: 10px 30px;
+    background-color: blue;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: white;
+      font-family: "Tilt Neon", sans-serif;
+      font-size: 45px;
+      font-weight: bold;
     }
   }
 }
