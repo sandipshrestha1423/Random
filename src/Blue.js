@@ -4,7 +4,7 @@ function Blue() {
   return (
     <>
       <div className="blue">
-        <h1>huh??</h1>
+        <h1>Huh??</h1>
       </div>
     </>
   );

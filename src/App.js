@@ -1,17 +1,13 @@
 import React from "react";
-import Header from "./Header";
-import Content from "./Content";
-import Blue from "./Blue";
+import Login from "./Login";
+import AppComponent from "./AppComponent";
 
 function App() {
   return (
-    <>
-      <div className="container">
-        <Header />
-        <Content />
-        <Blue />
-      </div>
-    </>
+    <div className="container">
+      <Login />
+      {/* <AppComponent /> */}
+    </div>
   );
 }
 
