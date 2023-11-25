@@ -1,18 +1,12 @@
-import React from "react";
-
-function Header() {
+import React, { useEffect } from 'react';
+function Header({name }) {
+  useEffect(() => {
+    console.log('Name prop changed:', name);
+  }, [name]);
   return (
     <>
       <div className="header">
-        <div className="title">Whaiyat!</div>
-        <div className="ulluswat">UlluSwat😉</div>
-        <div className="navbar">
-          <ul>
-            <li>Home</li>
-            <li>Somewhere</li>
-            <li>Ullu Swat</li>
-          </ul>
-        </div>
+        <h1>Hey "{name}"</h1>
       </div>
     </>
   );

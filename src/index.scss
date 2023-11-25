@@ -4,6 +4,43 @@
   padding: 0;
   margin: 0;
 }
+.alert {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box1 {
+    display: flex;
+    border: 4px rgb(25, 160, 162) double;
+    border-radius: 10px;
+    height: 270px;
+    width: 400px;
+    // align-items: center;
+    flex-direction: column;
+    .alertTopic {
+      color: rgb(51, 95, 81);
+      font-style: oblique;
+      font-size: 25px;
+      font-weight: bolder;
+      padding: 2% 45%;
+      border-bottom: 4px rgb(25, 160, 162) double;
+    }
+    .description {
+      color: rgb(51, 95, 81);
+
+      font-family: "Tilt Neon", sans-serif;
+      font-size: 20px;
+      padding: 16% 18%;
+      font-weight: bold;
+    }
+    button {
+      border: 3px rgb(25, 160, 162) double;
+      border-radius: 10px;
+      width: 70%;
+      margin: 0% 15%;
+    }
+  }
+}
 .box {
   display: flex;
   justify-content: center;
@@ -17,25 +54,13 @@
 
   .header {
     margin: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: chocolate;
     height: 70px;
     font-family: "Tilt Neon", sans-serif;
     color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    .title {
-      margin: 0 3px;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .ulluswat {
-      font-size: 35px;
-      font-weight: bold;
-    }
+    
 
     .navbar {
       ul {

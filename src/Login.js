@@ -1,17 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Header";
 function Login() {
   const [name, setName] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
+  useEffect(() => {
+    console.log("Name Updated:", name);
+    if (submitted) {
+      navigate("/content");
+    }
+  }, [name, submitted]);
   const handleSubmit = (event) => {
     event.preventDefault();
-    const enteredName =
-      event.target.elements.inlineFormInputGroupUsername.value;
-    setName(enteredName);
+    const enteredName = event.target.elements.inlineFormInputGroupUsername.value.trim();
+    if (enteredName === "") {
+      navigate("/alert");
+    } else {
+      setName(enteredName);
+      // setName(String(enteredName));
+      setSubmitted(true);
+    }
     event.target.elements.inlineFormInputGroupUsername.value = "";
   };
   return (
     <>
-      <div className="box">
+      <div className="box ">
         <form
           onSubmit={handleSubmit}
           class="row row-cols-lg-auto g-3 align-items-center"
@@ -37,7 +52,7 @@ function Login() {
             </button>
           </div>
         </form>
-        <br />
+        {submitted && <Header name={name} />}
       </div>
     </>
   );
