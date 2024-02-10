@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
-function Header({name }) {
-  useEffect(() => {
-    console.log('Name prop changed:', name);
-  }, [name]);
+import React, { useContext } from 'react';
+import UserContext from './context/UserContext';
+function Header() {
+  const { user } = useContext(UserContext);
+  
   return (
+
     <>
       <div className="header">
-        <h1>Hey "{name}"</h1>
+        <h1>Hey "{user.name }"</h1>
       </div>
     </>
   );
